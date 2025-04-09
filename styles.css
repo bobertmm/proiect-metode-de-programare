@@ -1,0 +1,121 @@
+h2
+{
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2em;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #323232;
+  z-index: 1000;
+  transition: top 0.3s;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.main-menu li {
+  margin: 0 15px;
+}
+
+.main-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.main-menu a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frog a
+{
+  text-decoration: none;
+  color:white;
+}
+
+p
+{
+  font-size: 1.2em;
+}
+
+.enunt
+{
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-right: 100px;
+}
+
+.enunt_explicatie
+{
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+
+p{
+  font-family: "Inter", sans-serif;
+}
+
+.gif
+{
+  text-align: center;
+  size: 75%;
+}
+
+body {
+  background-color: #18181B;
+  color: white;
+}
+
+.code-container {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 1rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 7rem;
+  background-color: #282c34;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.copy-btn:hover {
+  background-color: #3a3f4b;
+}
+
+pre {
+  border-radius: 8px;
+  overflow: auto;
+  background: #0D1116;
+  font-size: 20px;
+}

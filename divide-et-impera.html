@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles\github-dark.min.css">
+<script src="highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div id="navbar" class="nav-bar">
+        <ul class="main-menu">
+            <li>
+                <a href="main.html">Acasă</a>
+            </li>
+            <li>
+                <a href="backtracking.html">Backtracking</a>
+            </li>
+            <li>
+                <a href="greedy.html">Greedy</a>
+            </li>
+            <li>
+                <a href="dinamica.html">Programare Dinamică</a>
+            </li>
+        </ul>
+    </div>
+    <div class="frog">
+         <a href="https://atcoder.jp/contests/dp/tasks/dp_b" target="_blank">
+            <h2>B-Frog 2</h2>
+        </a>
+    </div>
+    <div class="enunt">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum turpis sit amet blandit gravida. Nam at tortor orci. Cras et sem lobortis, bibendum felis in, efficitur lorem. Quisque ac risus at turpis volutpat congue. Proin a vestibulum mauris. Pellentesque maximus, libero vel pulvinar laoreet, tortor massa eleifend odio, sollicitudin pharetra tellus neque et lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt ligula vel tellus lacinia, at sagittis est euismod.i</p>
+    </div>
+    <div class="enunt_explicatie">
+        <p>Integer congue accumsan accumsan. Aliquam quis imperdiet magna. Mauris sed elementum turpis, a aliquam sem. Suspendisse congue nisi non erat volutpat, ut vestibulum turpis sodales. Nunc eget accumsan leo, posuere imperdiet nunc. Pellentesque eu nunc enim. Fusce sodales eleifend hendrerit. Praesent ut facilisis diam, ut laoreet elit. Morbi consequat tristique est, a condimentum orci. Donec semper tempor hendrerit. Mauris tincidunt enim sodales, aliquet justo id, porttitor est. Integer sed massa volutpat, finibus ipsum et, elementum nibh. Nulla eu erat lectus. Donec maximus magna mauris, a rhoncus ex lacinia ac. Praesent maximus orci sed augue imperdiet, a sollicitudin sem mattis. Curabitur sed egestas sapien, sit amet condimentum mauris.</p>
+    </div>
+    <div class="gif">
+        <img src="cat.gif" alt="Computer man">
+    </div>
+    <div class="code">
+        <h2>Code Submission</h2>
+
+        <div class="code-container">
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
+        <pre><code id="code-block" class="language-cpp">
+        // Example C++ code
+        #include &lt;iostream&gt;
+
+        int main() {
+        std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+        return 0;
+        }
+        </code></pre>
+        </div>
+    </div>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");    
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (currentScroll > lastScrollTop) {
+                navbar.style.top = "-70px";
+            } else {
+                navbar.style.top = "0";
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+     <script>
+       function copyCode() {
+         const code = document.getElementById('code-block').innerText;
+         navigator.clipboard.writeText(code).then(() => {
+           alert("Code copied!");
+         });
+       }
+     </script>
+</body>
+</html>

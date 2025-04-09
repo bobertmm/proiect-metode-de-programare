@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Box</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Fira Code', monospace;
+      padding: 2rem;
+    }
+
+    .code-container {
+      position: relative;
+      margin-top: 1rem;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: #282c34;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .copy-btn:hover {
+      background-color: #3a3f4b;
+    }
+
+    pre {
+      padding: 1rem;
+      border-radius: 8px;
+      overflow: auto;
+      background: #2d2d2d;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Code Submission</h2>
+
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode()">Copy</button>
+    <pre><code id="code-block" class="language-cpp">
+// Example C++ code
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}
+    </code></pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script>
+    function copyCode() {
+      const code = document.getElementById('code-block').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert("Code copied!");
+      });
+    }
+  </script>
+
+</body>
+</html>
