@@ -45,7 +45,7 @@
     <div class="enunt">
         <p>Avem N pietre, numerotate de la 1-N. Pentru fiecare piatră i (1 ≤ i ≤ N), inălțimea pietrei i este h<sub>i</sub>. O broască se află inițial pe piatra 1. Va repeta următoarele actiuni de un număr de ori până când ajunge pe piatra N:
             Daca broasca se află pe piatra i, poate să sară pe una dintre pietrele următoare: piatra i+1, i+2, ..., i+k. Costul unei sarituri este dat de înălțimea pietrei de pe care sare minus înălțimea pietrei pe care aterizeaza |h<sub>i</sub> - h<sub>j</sub>|.
-            Găsesiți costul total minim astfel încât broasca să ajungă pe piatra N.
+            Găsiți costul total minim astfel încât broasca să ajungă pe piatra N.
         </p>
     </div>
     <div class="enunt_explicatie">
@@ -117,13 +117,57 @@ int main()
         <div class="code-container">
         <button class="copy-btn" onclick="copyCode()">Copiază</button>
         <pre><code id="code-block" class="language-cpp">
-        // Example C++ code
-        #include &lt;iostream&gt;
+#include  &lt;iostream&gt;
 
-        int main() {
-        std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
-        return 0;
+using namespace std;
+
+const int NMAX = 1e5;
+const int INF = 1e9;
+
+int n, k;
+int h[NMAX + 1];
+int dp[NMAX + 1];
+
+void citire(){
+    cin >> n >> k;
+    for (int i = 1; i <= n; ++i){
+        cin >> h[i];
+    }
+}
+
+int cost(int a, int b){
+    return abs(h[a] - h[b]);
+}
+
+void init_dp(){
+    for (int i = 2; i <= n; ++i){
+        dp[i] = INF;
+    }
+}
+
+void calculare_dp(){
+    for (int i = 1; i < n; ++i){
+        for (int j = i + 1; j <= min(i + k, n); ++j){
+            int cost_curent = cost(i, j) + dp[i];
+            if (cost_curent < dp[j]){
+                dp[j] = cost_curent;
+            }
         }
+    }
+}
+
+void afisare(){
+    cout << dp[n];
+}
+
+int main()
+{
+    citire();
+    init_dp();
+    calculare_dp();
+    afisare();
+    return 0;
+}                
         </code></pre>
         </div>
     </div>
