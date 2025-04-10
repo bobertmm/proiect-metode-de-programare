@@ -47,7 +47,11 @@
             Cunoscând numărul de camere, starea lor inițială,configurația întrerupătoarelor (programate de Johnie) cât și timpul de acționare a acestora, se cere să determinați, dacă este posibil, timpul minim în care Johnie poate face lumină în toate camerele.</p>
     </div>
     <div class="enunt_explicatie">
-        <p>Integer congue accumsan accumsan. Aliquam quis imperdiet magna. Mauris sed elementum turpis, a aliquam sem. Suspendisse congue nisi non erat volutpat, ut vestibulum turpis sodales. Nunc eget accumsan leo, posuere imperdiet nunc. Pellentesque eu nunc enim. Fusce sodales eleifend hendrerit. Praesent ut facilisis diam, ut laoreet elit. Morbi consequat tristique est, a condimentum orci. Donec semper tempor hendrerit. Mauris tincidunt enim sodales, aliquet justo id, porttitor est. Integer sed massa volutpat, finibus ipsum et, elementum nibh. Nulla eu erat lectus. Donec maximus magna mauris, a rhoncus ex lacinia ac. Praesent maximus orci sed augue imperdiet, a sollicitudin sem mattis. Curabitur sed egestas sapien, sit amet condimentum mauris.</p>
+        <p>
+            Pentru a citi datele problemei ne facem: un vector de boolean pentru a citi dacă lumina este aprinsă sau nu într-o cameră, o structură care conține informațiile despre un întrerupătoar anume, adică timpul de acționare, numărul de camere acționate și respectiv indicii acestora (într-un vector dinamic), și un vector de această structură.
+
+            Soluția se bazează pe observația că întrerupătoarele nu pot acționa camerele din urma lor. Deci putem pur și simplu să parcurgem de la stânga la dreapta și să aprindem întrerupătoarele din camerele cu lumina stinsă. Concret, ne facem o funcție actionare_intrerupator pe care o vom apela când găsim lumina stinsă într-o cameră. Această funcție va parcurge indicii camerelor conectate și va inversa valoarea de lumină din acestea, apoi va adăuga timpul acționării întrerupătoarului la timpul total, pe care îl vom afișa la sfârșit.
+        </p>
     </div>
     <div class="gif">
         <img src="images/cat.gif" alt="example gif">
@@ -58,7 +62,7 @@
         <div class="code-container">
         <button class="copy-btn" onclick="copyCode()">Copiază</button>
         <pre><code id="code-block" class="language-cpp">
-#include  &lt;iostream&gt;
+#include &lt;iostream&gt;
 #include &lt;vector&gt;
 
 using namespace std;
@@ -70,7 +74,7 @@ const int NMAX = 1e3;
 struct intrerupator_t{
     int timp_actionare;
     int nr_camere_actionate;
-    vector<int> camere;
+    vector&lt;int&gt; camere;
 };
 
 int n, m, timp_total;
