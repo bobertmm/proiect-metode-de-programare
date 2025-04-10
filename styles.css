@@ -47,6 +47,10 @@ h2
   box-sizing: border-box;
 }
 
+.frog
+{
+  width: 250px;
+}
 .frog a
 {
   text-decoration: none;
