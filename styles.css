@@ -39,6 +39,7 @@ h2
 .main-menu a:hover {
   background-color: #575757;
   border-radius: 5px;
+  margin: 10px;    /*It's not a bug, it's a feature. */
 }
 
 * {
