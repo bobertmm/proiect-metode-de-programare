@@ -48,7 +48,7 @@
             Găsiți costul total minim astfel încât broasca să ajungă pe piatra N.
         </p>
     </div>
-    <div class="enunt_explicatie">
+    <div class="enunt_explicatie_backtracking">
         <p>
             Funcția noastră backtracking are doi parametri: poziția pe care se află broasca și costul acumulat până în acel punct. În cazul în care nu am ajuns la sfârșit, vom parcurge pietrele în care putem ajunge și vom apela funcția backtracking pentru fiecare dintre ele. De obicei pietrele în care vom putea ajunge vor fi următoarele k, dar în cazul în care sunt mai puțin de k pietre până la sfârșit, atunci le vom parcurge pe acestea. Când ajungem pe ultima piatră vom compara costul drumului cu soluția de până acum, iar în cazul în care e mai bun atunci o vom înlocui.
         </p>

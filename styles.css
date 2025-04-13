@@ -80,6 +80,15 @@ p
   padding-bottom: 100px;
 }
 
+/* o solutie foarte shitty dar e aproape 10 noaptea si maine dam test la romana */
+.enunt_explicatie_backtracking
+{
+  padding-left: 100px;
+  padding-top: 60px;
+  padding-right: 100px;
+  padding-bottom: 0px;
+}
+
 p{
   font-family: "Inter", sans-serif;
 }
